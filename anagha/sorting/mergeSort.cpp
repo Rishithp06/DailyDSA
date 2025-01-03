@@ -61,7 +61,7 @@ int main() {
         cout << v[i] << " ";
     cout << endl;
 
-    insertionSort(v);
+    mergeSort(v, 0, size);
 
     
 
