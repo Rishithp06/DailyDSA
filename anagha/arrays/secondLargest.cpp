@@ -61,10 +61,7 @@ int main() {
     for (int i = 0; i < size; i++)
         cin >> v[i];
 
-    cout << "Before sorting: ";
-    for (int i = 0; i < size; i++)
-        cout << v[i] << " ";
-    cout << endl;
+    
 
     cout<<getSecondLargest(v);
 
