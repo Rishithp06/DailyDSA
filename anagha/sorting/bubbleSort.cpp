@@ -14,6 +14,21 @@ void bubbleSort(vector<int>&v, int n){
     }
 }
 
+void bubbleSortRecursive(vector<int>arr, int n){
+    if(n == 1) return;
+    int didSwap = 0;
+    for(int j = 0; j<= n-2; j++){
+        if(arr[j] >= arr[j+1]){
+            int temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+        }
+    }
+
+    if(didSwap == 0)return;
+    bubbleSortRecursive(arr, n-1);
+    
+}
 int main() {
     int size;
     cout << "Enter the size of the array: ";
