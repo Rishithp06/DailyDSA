@@ -13,3 +13,5 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
     }
     return false;
 }
+
+https://leetcode.com/problems/search-a-2d-matrix/solutions/6235648/binary-search-easy-by-rishithp-qbl3/
