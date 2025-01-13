@@ -15,7 +15,7 @@ public:
             while (i < n && s[i] != ' ') {
                 word += s[i]; // Append characters until a space is encountered
                 i++;
-            }
+            }//
 
             // Step 4: Reverse the word to restore its original order
             reverse(word.begin(), word.end());
