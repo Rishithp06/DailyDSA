@@ -6,19 +6,19 @@ void leftRotate(vector<int>&nums, int k){
     int n = nums.size();
     k = k % n;
     if (k == 0) return;
+    reverse(nums.begin(), nums.begin() + k);
+    reverse(nums.begin() + k, nums.end());
+    reverse(nums.begin(), nums.end());
+}
+
+void rightRotate(vector<int>&nums, int k){
+    int n = nums.size();
+    k = k % n;
+    if (k == 0) return;
     reverse(nums.begin(),nums.end() - k);
     reverse(nums.end() - k, nums.end());
     reverse(nums.begin(), nums.end());
 }
-
-// void rightRotate(vector<int>&nums, int k){
-//     int n = nums.size();
-//     k = k % n;
-//     if (k == 0) return;
-//     reverse(nums.begin(),nums.end() - k);
-//     reverse(nums.end() - k, nums.end());
-//     reverse(nums.begin(), nums.end());
-// }
 
 
 int main() {
@@ -32,10 +32,13 @@ int main() {
         cin >> v[i];
 
 
-    int k = removeDuplicates(v, size);
+    leftRotate(v, 3);
+    cout << "After rotating ";
+    for (int i = 0; i < k; i++)
+        cout << v[i];
 
-    
-    cout << "After removing duplicates ";
+    rightRotate(v, 3);
+    cout << "After rotating ";
     for (int i = 0; i < k; i++)
         cout << v[i];
 
