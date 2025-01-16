@@ -19,7 +19,7 @@ public:
 // At each recursive call:
 
 // If open < n, add an opening parenthesis and recurse.
-// If close < open, add a closing parenthesis and recurse.
+// If close < open, add a closing parenthesis and recurse..
 
     void generatee(int n,int open,int close,string current,vector<string>&res)
     {
